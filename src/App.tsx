@@ -32,7 +32,7 @@ export default function App() {
       <header className="h-16 bg-[#9F224E] text-white flex items-center justify-between px-8 shrink-0">
         <div className="flex items-center gap-4">
           <div className="text-2xl font-black tracking-tighter uppercase">VnExpress <span className="font-light opacity-80">Design System</span></div>
-          <span className="px-2 py-0.5 bg-white/20 text-[10px] rounded uppercase font-bold tracking-widest">v2.4.0</span>
+          <span className="px-2 py-0.5 bg-white/20 text-[10px] rounded uppercase font-bold tracking-widest">v6.26</span>
         </div>
       </header>
 
