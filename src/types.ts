@@ -23,7 +23,7 @@ export type ComponentItem = {
 };
 
 export type NavItem = {
-  id: 'tokens' | 'components' | 'templates' | 'specs';
+  id: 'overview' | 'tokens' | 'components' | 'templates' | 'specs';
   label: string;
   icon: any; // Lucide icon
 };

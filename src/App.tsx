@@ -9,10 +9,12 @@ import { TokensView } from './components/views/TokensView';
 import { ComponentsView } from './components/views/ComponentsView';
 import { SpecsView } from './components/views/SpecsView';
 import { TemplatesView } from './components/views/TemplatesView';
-import { Palette, LayoutGrid, FileJson, LayoutTemplate, Settings2 } from 'lucide-react';
+import { OverviewView } from './components/views/OverviewView';
+import { Palette, LayoutGrid, FileJson, LayoutTemplate, Settings2, Target } from 'lucide-react';
 import { NavItem } from './types';
 
 const NAV_ITEMS: NavItem[] = [
+  { id: 'overview', label: 'Chiến dịch & Mục tiêu', icon: Target },
   { id: 'tokens', label: 'Design Tokens', icon: Palette },
   { id: 'components', label: 'Component Library', icon: LayoutGrid },
   { id: 'templates', label: 'Template', icon: LayoutTemplate },
@@ -20,7 +22,7 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<string>('tokens');
+  const [activeTab, setActiveTab] = useState<string>('overview');
 
   return (
     <div className="h-screen bg-[#F8F9FA] flex flex-col font-sans text-[#1A1A1A] overflow-hidden">
@@ -46,6 +48,7 @@ export default function App() {
         />
         
         <main className="grow p-8 flex flex-col bg-[#FDFDFD] overflow-y-auto w-full">
+          {activeTab === 'overview' && <OverviewView />}
           {activeTab === 'tokens' && <TokensView />}
           {activeTab === 'components' && <ComponentsView />}
           {activeTab === 'templates' && <TemplatesView />}
