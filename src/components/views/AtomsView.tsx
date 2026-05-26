@@ -77,37 +77,6 @@ export function AtomsView() {
         </div>
       </section>
       
-      <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col gap-6">
-        <div className="flex justify-between items-center">
-          <h3 className="font-bold uppercase tracking-widest text-xs text-gray-400">Specs / Pagination Logic (Stream)</h3>
-        </div>
-        <div>
-          <h4 className="text-sm font-bold text-gray-900 mb-4">Rule tải luồng tin:</h4>
-          <ul className="space-y-4">
-            <li className="flex items-start gap-3">
-              <span className="w-6 h-6 rounded-full bg-gray-100 text-[#9F224E] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">01</span>
-              <p className="text-xs text-gray-600"><strong className="text-gray-900">Khối lượng:</strong> Mặc định lấy ~30 tin cho một trang (1 lần trigger endpoint).</p>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="w-6 h-6 rounded-full bg-gray-100 text-[#9F224E] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">02</span>
-              <p className="text-xs text-gray-600"><strong className="text-gray-900">Giới hạn List:</strong> Cho phép cuộn tối đa 3 trang luân phiên (tương ứng ≈ 90 tin stream).</p>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="w-6 h-6 rounded-full bg-gray-100 text-[#9F224E] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">03</span>
-              <p className="text-xs text-gray-600"><strong className="text-gray-900">Kết thúc chu kỳ:</strong> Nếu user trượt hết trang số 3, hệ thống chốt hiển thị Action/Button <strong>"Xem theo ngày"</strong> (Calendar date picker).</p>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="w-6 h-6 rounded-full bg-gray-100 text-[#9F224E] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">PC</span>
-              <p className="text-xs text-gray-600"><strong className="text-gray-900">PC Interaction:</strong> Dùng thanh số trang Pagination. Trang Active nền bordeaux #9F224E chữ trắng.</p>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="w-6 h-6 rounded-full bg-gray-100 text-[#9F224E] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">MB</span>
-              <p className="text-xs text-gray-600"><strong className="text-gray-900">Mobile Interaction:</strong> Tự động Infinite Scroll nối dài khi cọ sát ngưỡng màn hình dưới.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
       {/* Atoms List */}
       <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col gap-6">
         <div className="flex justify-between items-center">

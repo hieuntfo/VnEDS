@@ -162,7 +162,7 @@ export function MoleculesView() {
             <ul className="text-xs text-gray-600 space-y-2 mb-6">
               <li className="flex justify-between border-b border-gray-50 pb-2">
                 <span><span className="font-mono bg-gray-100 px-1 rounded">Thumbnail</span></span>
-                <span>Thiếu &rarr; dùng placeholder cùng ratio</span>
+                <span>Thiếu &rarr; Auto Layout ẩn luôn thumbs (không dùng placeholder)</span>
               </li>
               <li className="flex justify-between border-b border-gray-50 pb-2">
                 <span><span className="font-mono bg-gray-100 px-1 rounded">Location</span></span>
