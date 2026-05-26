@@ -99,6 +99,9 @@ export function TemplatesView() {
           <h3 className="font-bold uppercase tracking-widest text-xs text-gray-400">
             02 / Layout Templates: Cụm tin top
           </h3>
+          <span className="text-xs text-gray-500 bg-gray-50 px-2 py-1 rounded">
+            Áp dụng cho PC (có nhiều không gian bố trí)
+          </span>
         </div>
 
         <div className="flex flex-col gap-4">
