@@ -187,13 +187,7 @@ export function OverviewView() {
           <p className="text-gray-800 text-[15px] leading-relaxed">
             Đây là lần chuẩn hóa mang tính{" "}
             <strong className="text-[#9F224E]">dứt điểm</strong> để xử lý lỗi 10
-            năm qua. Từ nay về sau, nếu chuẩn hóa xong & giao Spec chuẩn mà Web
-            vẫn lỗi:{" "}
-            <strong className="text-red-600 underline underline-offset-4 decoration-red-200">
-              Đó là lỗi của Kỹ Thuật (Dev)
-            </strong>
-            . Thiết kế hết trách nhiệm khi đã chốt Base chuẩn. Ai không tuân thủ
-            áp dụng File mới chuẩn &rarr;{" "}
+            năm qua. Khi có chuẩn hóa, ai không tuân thủ áp dụng &rarr;{" "}
             <strong className="text-gray-900">Phải tự chịu trách nhiệm!</strong>
           </p>
         </div>
