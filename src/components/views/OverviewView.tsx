@@ -85,7 +85,7 @@ export function OverviewView() {
                     Landing Page thuần tin tức
                   </strong>{" "}
                   (ví dụ: sự kiện thời sự). Bỏ qua các landing page đặc thù,
-                  nặng tính sáng tạo và ít tin tức (Teck Awards, Car Awards) để
+                  nặng tính sáng tạo và ít tin tức (Tech Awards, Car Awards) để
                   designers thoải mái sáng tạo.
                 </p>
               </div>
