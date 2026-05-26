@@ -19,19 +19,19 @@ export function OverviewView() {
             <div className="grid md:grid-cols-2 gap-4 text-red-900 text-sm leading-relaxed">
               <div className="bg-white/60 p-5 rounded-xl border border-red-200 shadow-sm">
                 <span className="block font-bold text-base mb-1">Lỗi hiển thị hàng loạt</span>
-                Các landing page hiện tại (đặc biệt mobile) thường xuyên gặp lỗi vặt như sai font chữ, sai line-height, sai màu sắc, hoặc cấu trúc bị đảo lộn lặp đi lặp lại.
+                Thường xuyên gặp lỗi sai font chữ, line-height, màu sắc, cấu trúc lặp đi lặp lại.
               </div>
               <div className="bg-white/60 p-5 rounded-xl border border-red-200 shadow-sm">
                 <span className="block font-bold text-base mb-1">Thiếu nhất quán, mạnh ai nấy làm</span>
-                Tự sáng tạo hoặc copy file của nhau rồi tự sửa. Cùng một cấu trúc khối tin nhưng mỗi trang (Kinh doanh, BĐS, World Cup) lại hiển thị một kiểu khác nhau.
+                Tự sáng tạo hoặc copy rồi tự sửa, dẫn đến hiển thị không đồng nhất trên các trang.
               </div>
               <div className="bg-white/60 p-5 rounded-xl border border-red-200 shadow-sm">
                 <span className="block font-bold text-base mb-1">Quản lý file lộn xộn</span>
-                Tên frame chưa chuyển đổi chuẩn (vẫn là frame 1, 2, 3), các file cũ không có tính ứng dụng cao khiến mọi người lười dùng hoặc dùng sai.
+                Tên frame chưa chuyển đổi chuẩn, các file cũ không có tính ứng dụng cao.
               </div>
               <div className="bg-white/60 p-5 rounded-xl border border-red-200 shadow-sm">
                 <span className="block font-bold text-base mb-1">Hạn chế kỹ thuật</span>
-                Mỗi khi đẻ ra landing page mới, đội dev lại phải code lại một bộ riêng, dẫn đến việc khó kiểm soát và tốn thời gian follow bảo trì.
+                Đội dev lại phải code lại một bộ riêng cho từng landing page, khó kiểm soát và bảo trì.
               </div>
             </div>
           </div>
@@ -100,46 +100,11 @@ export function OverviewView() {
         </div>
       </section>
 
-      {/* 4. Action Items */}
-      <section className="bg-gray-900 rounded-2xl p-8 text-gray-300 shadow-xl">
-        <h2 className="text-xl font-bold text-white mb-8 flex items-center gap-3 uppercase tracking-wide">
-          <Users className="w-6 h-6 text-[#1DB549]" /> Phân Công Công Việc
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="border border-gray-700 bg-gray-800 rounded-2xl p-6 shadow-sm">
-            <div className="text-white font-bold text-xl mb-4 border-b border-gray-700 pb-3">Minh</div>
-            <ul className="text-sm space-y-3 list-disc pl-5 text-gray-400 marker:text-gray-600">
-              <li>Xây dựng lại bộ component chuẩn từ con số 0 (Header/Footer...).</li>
-              <li>Đảm bảo chuẩn Naming Convention & tính linh hoạt (Slot).</li>
-              <li>Chuyển giao cho Men sau khi done.</li>
-            </ul>
-          </div>
-          <div className="border border-gray-700 bg-gray-800 rounded-2xl p-6 shadow-sm">
-            <div className="text-white font-bold text-xl mb-4 border-b border-gray-700 pb-3">Men</div>
-            <ul className="text-sm space-y-3 list-disc pl-5 text-gray-400 marker:text-gray-600">
-              <li>Liệt kê list component thực tế tránh sót.</li>
-              <li>Quản lý, duy trì & cập nhật File Style Guide chung.</li>
-              <li>Đảm bảo team thiết kế CHỈ được gọi file từ bộ chuẩn này.</li>
-            </ul>
-          </div>
-          <div className="border border-[#9F224E] bg-gray-800/80 rounded-2xl p-6 shadow-sm relative overflow-hidden">
-            <div className="absolute inset-x-0 top-0 h-1 bg-[#9F224E]"></div>
-            <div className="text-[#FFE7E9] font-bold text-xl mb-4 border-b border-gray-700 pb-3 flex items-center justify-between">
-              Hiếu <span className="text-[10px] uppercase font-bold bg-[#9F224E] text-white px-2 py-0.5 rounded-full">Gatekeeper</span>
-            </div>
-            <ul className="text-sm space-y-3 list-disc pl-5 text-gray-300 marker:text-[#9F224E]">
-              <li>Tuyệt đối phê duyệt (giữ cổng) các yêu cầu tùy biến từ các team khác.</li>
-              <li>Chặn tình trạng phá vỡ quy chuẩn chung.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Cam kết */}
+      {/* 4. Cam kết */}
       <section className="bg-gradient-to-r from-[#FFE7E9] to-[#FFF1F2] border border-[#9F224E]/30 rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-center shadow-sm">
         <ShieldCheck className="text-[#9F224E] w-16 h-16 shrink-0" />
         <div>
-          <h2 className="text-[#9F224E] font-bold text-xl uppercase tracking-widest mb-3">Lời Kế & Cam Kết</h2>
+          <h2 className="text-[#9F224E] font-bold text-xl uppercase tracking-widest mb-3">4. Lời Kết & Cam Kết</h2>
           <p className="text-gray-800 text-[15px] leading-relaxed">
             Đây là lần chuẩn hóa mang tính <strong className="text-[#9F224E]">dứt điểm</strong> để xử lý lỗi 10 năm qua. 
             Từ nay về sau, nếu chuẩn hóa xong & giao Spec chuẩn mà Web vẫn lỗi: <strong className="text-red-600 underline underline-offset-4 decoration-red-200">Đó là lỗi của Kỹ Thuật (Dev)</strong>. 
