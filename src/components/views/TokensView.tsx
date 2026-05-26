@@ -116,7 +116,7 @@ export function TokensView() {
             <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wider mb-4">PC (Desktop)</h3>
             <ul className="space-y-3 font-sans text-xs text-gray-600">
               <li className="flex justify-between border-b border-gray-200 pb-2">
-                <span>Max Width</span><span className="font-mono text-[#9F224E]">1140px</span>
+                <span>Max Width</span><span className="font-mono text-[#9F224E]">1100px</span>
               </li>
               <li className="flex justify-between border-b border-gray-200 pb-2">
                 <span>Columns</span><span className="font-mono text-[#9F224E]">12</span>
@@ -142,10 +142,10 @@ export function TokensView() {
                 <span>Layout</span><span className="font-mono text-[#9F224E]">1 Column</span>
               </li>
               <li className="flex justify-between border-b border-gray-200 pb-2">
-                <span>Content Max Width</span><span className="font-mono text-[#9F224E]">382px</span>
+                <span>Content Max Width</span><span className="font-mono text-[#9F224E]">374px</span>
               </li>
               <li className="flex justify-between">
-                <span>Outer Margin</span><span className="font-mono text-[#9F224E]">16px</span>
+                <span>Outer Margin</span><span className="font-mono text-[#9F224E]">20px</span>
               </li>
             </ul>
           </div>

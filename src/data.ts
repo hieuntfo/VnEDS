@@ -82,7 +82,10 @@ export const INITIAL_CHECKLIST = [
   { id: 'a3', section: 'Atoms', label: 'Inputs & Checkboxes', completed: false },
   { id: 'a4', section: 'Atoms', label: 'Pagination & Timestamp', completed: false },
 
-  { id: 'm1', section: 'Molecules', label: 'Block tin (Full variant matrix)', completed: false },
+  { id: 'm1', section: 'Molecules', label: 'Block tin (Full variant matrix / 4 States)', completed: false },
+  { id: 'm1-1', section: 'Molecules', label: 'Block tin: Thumbnail & Type-icon Swaps', completed: false },
+  { id: 'm1-2', section: 'Molecules', label: 'Block tin: Clamp + Ellipsis Rules', completed: false },
+  { id: 'm1-3', section: 'Molecules', label: 'Block tin: Mobile vs PC Layout Auto Layout', completed: false },
   { id: 'm2', section: 'Molecules', label: 'Author & Comment item', completed: false },
   { id: 'm3', section: 'Molecules', label: 'Navigation & Breadcrumb', completed: false },
   { id: 'm4', section: 'Molecules', label: 'Social share & Quote', completed: false },

@@ -37,7 +37,7 @@ export function Sidebar({ items, activeId, onNavigate }: SidebarProps) {
         <p className="text-[11px] text-gray-500 leading-relaxed italic font-heading block">
           "Cần duy trì tính nhất quán tuyệt đối giữa báo điện tử và các Landingpage chiến dịch."
         </p>
-        <p className="text-[10px] font-bold mt-2 text-[#9F224E]">— Giám Đốc Sản Phẩm</p>
+        <p className="text-[10px] font-bold mt-2 text-[#9F224E]">— Phòng Sản phẩm</p>
       </div>
     </aside>
   );

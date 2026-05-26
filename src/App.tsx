@@ -8,15 +8,15 @@ import { Sidebar } from './components/Sidebar';
 import { TokensView } from './components/views/TokensView';
 import { ComponentsView } from './components/views/ComponentsView';
 import { SpecsView } from './components/views/SpecsView';
-import { ChecklistView } from './components/views/ChecklistView';
-import { Palette, LayoutGrid, FileJson, CheckSquare, Settings2 } from 'lucide-react';
+import { TemplatesView } from './components/views/TemplatesView';
+import { Palette, LayoutGrid, FileJson, LayoutTemplate, Settings2 } from 'lucide-react';
 import { NavItem } from './types';
 
 const NAV_ITEMS: NavItem[] = [
   { id: 'tokens', label: 'Design Tokens', icon: Palette },
   { id: 'components', label: 'Component Library', icon: LayoutGrid },
-  { id: 'specs', label: 'Data Spec / Layout', icon: FileJson },
-  { id: 'checklist', label: 'Build Tracker', icon: CheckSquare },
+  { id: 'templates', label: 'Template', icon: LayoutTemplate },
+  { id: 'specs', label: 'Data Specs', icon: FileJson },
 ];
 
 export default function App() {
@@ -48,8 +48,8 @@ export default function App() {
         <main className="grow p-8 flex flex-col bg-[#FDFDFD] overflow-y-auto w-full">
           {activeTab === 'tokens' && <TokensView />}
           {activeTab === 'components' && <ComponentsView />}
+          {activeTab === 'templates' && <TemplatesView />}
           {activeTab === 'specs' && <SpecsView />}
-          {activeTab === 'checklist' && <ChecklistView />}
         </main>
       </div>
 
