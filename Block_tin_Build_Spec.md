@@ -1,10 +1,13 @@
 # VnExpress — BLOCK TIN · Build Spec (Figma-ready)
+
 ### Tài liệu dựng chi tiết cho component lõi "Block tin"
+
 > Đi kèm file tổng `VnExpress_Component_Inventory_Spec.md`. File này dành riêng cho nhân sự dựng component trong Figma — đọc từ trên xuống là dựng được.
 
 ---
 
 ## 0. NGUYÊN TẮC
+
 - **1 component set duy nhất** tên `Block tin`, điều khiển bằng property — **không** vẽ rời từng kiểu.
 - Mọi màu/chữ/spacing **tham chiếu Token/Variable**, không hardcode.
 - Mọi phần thay đổi được = **slot** (instance swap / text property), đánh dấu 🔌.
@@ -18,12 +21,15 @@
 ┌──────────────────────────────────────────┐
 │  [Tag/Live]🔌                              │  ← tag (optional)
 │  ┌────────────┐                            │
-│  │ Thumbnail  │🔌  ← có overlay type-icon  │
-│  │  (ratio)   │     (Video=play giữa,      │
-│  └────────────┘      Ảnh=badge góc)        │
+│  │ Thumbnail  │🔌  ← Ảnh, Video, VnEGO,    │
+│  │  (ratio)   │     Infographic, Tâm sự,   │
+│  └────────────┘     Spotlight = badge góc  │
+│                     dưới trái (bottom-left)│
 │  [type-icon]🔌 Title 🔌                    │  ← icon đứng trước title khi NO-THUMB
+│  [💬 Comment]🔌                            │  ← (Nếu block rỗng Lead) Đặt sau Title, chỉ hiện khi > 15
 │  Lead / Sapo 🔌                            │  ← optional theo size
-│  Meta: timestamp🔌 · location🔌 · cat🔌 · 💬count🔌 │
+│  [💬 Comment]🔌                            │  ← (Nếu block có đủ Title, Lead, Thumb) Đặt sau Lead, chỉ hiện khi > 15
+│  Meta: timestamp🔌 · location🔌 · cat🔌     │
 └──────────────────────────────────────────┘
 ```
 
@@ -42,25 +48,29 @@
 ## 2. FIGMA COMPONENT PROPERTIES (schema chuẩn)
 
 ### 2.1 — Variant properties (tạo master variants)
-| Property | Values | Ghi chú |
-|---|---|---|
-| `Platform` | `PC` · `Mobile` | Mobile bật radius 3px cho thumb |
-| `Size` | `Topstory` · `Standard` · `Stream` · `Mini` | quyết định text token + layout |
-| `Thumb` | `Top` · `Bottom` · `Left` · `Right` · `Full` · `None` | vị trí ảnh (Bottom = ảnh dưới text, dùng cho list Mobile; None = không ảnh) |
-| `State` | `Default` · `Hover` · `Visited` · `Loading` | Loading = skeleton |
+
+| Property   | Values                                                | Ghi chú                                                                     |
+| ---------- | ----------------------------------------------------- | --------------------------------------------------------------------------- |
+| `Platform` | `PC` · `Mobile`                                       | Mobile bật radius 3px cho thumb                                             |
+| `Size`     | `Topstory` · `Standard` · `Stream` · `Mini`           | quyết định text token + layout                                              |
+| `Thumb`    | `Top` · `Bottom` · `Left` · `Right` · `Full` · `None` | vị trí ảnh (Bottom = ảnh dưới text, dùng cho list Mobile; None = không ảnh) |
+| `State`    | `Default` · `Hover` · `Visited` · `Loading`           | Loading = skeleton                                                          |
 
 ### 2.2 — Boolean properties (bật/tắt trong từng variant — KHÔNG nhân master)
+
 `show Lead` · `show Timestamp` · `show Location` · `show Category` · `show Comment` · `show Tag`
 
 ### 2.3 — Instance swap (slot)
-| Slot | Trỏ tới component | Property của component đó |
-|---|---|---|
-| `Thumbnail` 🔌 | `Thumb` | `ratio = 5:3 (mặc định) / 1:1 / circle / 4:5 (short video) / 16:9 (player embed)` |
-| `Type-icon` 🔌 | `Type-icon` | `type = Live/Video/Ảnh/Audio/Infographic/Interactive/Review/Trắc nghiệm/Tư vấn/Longform` |
+
+| Slot           | Trỏ tới component | Property của component đó                                                                |
+| -------------- | ----------------- | ---------------------------------------------------------------------------------------- |
+| `Thumbnail` 🔌 | `Thumb`           | `ratio = 5:3 (mặc định) / 1:1 / circle / 4:5 (short video) / 16:9 (player embed)`        |
+| `Type-icon` 🔌 | `Type-icon`       | `type = Live/Video/Ảnh/Audio/Infographic/Interactive/Review/Trắc nghiệm/Tư vấn/Longform` |
 
 > ⚙️ **Ratio đặt ở component `Thumb`, KHÔNG đặt ở Block tin** → tránh nổ variant. Block tin chỉ swap thumbnail.
 
 ### 2.4 — Text properties (nội dung)
+
 `Title` · `Lead` · `Timestamp` · `Location` · `Category` · `Comment count` · `Tag label`
 
 ---
@@ -86,7 +96,8 @@
 **Clamp title:** Topstory 2 dòng · Standard 3 dòng · Stream 2–3 dòng · Mini 2 dòng → ellipsis.
 
 ## 3b. TOKEN CHỮ BÀI CHI TIẾT (Detail body) — CHỐT
-*(Khác với block list — dùng khi dựng template Detail)*
+
+_(Khác với block list — dùng khi dựng template Detail)_
 | Token | PC | Mobile |
 |---|---|---|
 | `title-detail` | **32px · 150% · Merriweather Bold · `#222`** | **22px · 150% · Merriweather Bold · `#222`** |
@@ -100,12 +111,12 @@
 
 ## 4. MA TRẬN TỔ HỢP HỢP LỆ (chỉ dựng các ô này — bỏ tổ hợp vô nghĩa)
 
-| Size \ Thumb | Top | Bottom | Left | Full | None |
-|---|---|---|---|---|---|
-| **Topstory** | ✅ (M) | – | – | ✅ (PC) | ✅ |
-| **Standard** | ✅ (PC) | ✅ (M) | ✅ (PC) | – | ✅ |
-| **Stream** | – | ✅ (M) | ✅ (PC) | – | ✅ |
-| **Mini** | – | ✅ (M) | ✅ (PC) | – | ✅ |
+| Size \ Thumb | Top     | Bottom | Left    | Full    | None |
+| ------------ | ------- | ------ | ------- | ------- | ---- |
+| **Topstory** | ✅ (M)  | –      | –       | ✅ (PC) | ✅   |
+| **Standard** | ✅ (PC) | ✅ (M) | ✅ (PC) | –       | ✅   |
+| **Stream**   | –       | ✅ (M) | ✅ (PC) | –       | ✅   |
+| **Mini**     | –       | ✅ (M) | ✅ (PC) | –       | ✅   |
 
 `(PC)` = dùng trên PC · `(M)` = dùng trên Mobile · `None` = dùng cả 2.
 → Mỗi ô hợp lệ × `State (4)`. Số master ≈ **60–70** (đếm theo 4b, vì mỗi cell đã gắn platform). Lấy **mục 4b làm nguồn chuẩn về bố cục.**
@@ -115,18 +126,20 @@
 ---
 
 ## 4b. BỐ CỤC PC vs MOBILE THEO SIZE — CHỐT
+
 > Mobile **không** dùng thumb bên phải. Quy tắc: **Tin top 1 = ảnh trên; tin 2→hết = title-lead trước, ảnh đỡ bên dưới** (ưu tiên giá trị tiêu đề + sapo).
 
-| Size | **PC layout** | **Mobile layout (CHỐT)** |
-|---|---|---|
-| **Topstory** (tin top 1) | Thumb `Full/Top` lớn, title + lead bên dưới | **Thumb `Top`** full-width (382px) → Title → Lead → Meta |
-| **Standard** (tin 2→) | Thumb `Top` (grid) / `Left` | **Title → Lead → Meta → Thumb `Bottom`** (full-width 5:3) |
-| **Stream** | Thumb `Left` | **Title → Lead → Meta → Thumb `Bottom`** |
-| **Mini** | Thumb `Left` / `None` | **Title → Meta → Thumb `Bottom`** / `None` |
+| Size                     | **PC layout**                               | **Mobile layout (CHỐT)**                                  |
+| ------------------------ | ------------------------------------------- | --------------------------------------------------------- |
+| **Topstory** (tin top 1) | Thumb `Full/Top` lớn, title + lead bên dưới | **Thumb `Top`** full-width (382px) → Title → Lead → Meta  |
+| **Standard** (tin 2→)    | Thumb `Top` (grid) / `Left`                 | **Title → Lead → Meta → Thumb `Bottom`** (full-width 5:3) |
+| **Stream**               | Thumb `Left`                                | **Title → Lead → Meta → Thumb `Bottom`**                  |
+| **Mini**                 | Thumb `Left` / `None`                       | **Title → Meta → Thumb `Bottom`** / `None`                |
 
 **Thứ tự slot Mobile (tin 2→hết):** `Title` → `Lead` → `Meta` → `Thumbnail (Bottom)`. Divider mảnh ngăn cách giữa các tin.
 
 **Đã chốt 3 điểm:**
+
 1. ✅ Mobile = **title-led, thumb-Bottom** (không phải thumb-Right). Tin #1 = thumb-Top.
 2. ✅ **Type scale Mobile** giảm bậc — có **token Mobile riêng** (xem mục 3b).
 3. ✅ **Box 300 (sidebar): bỏ qua trong phạm vi Landingpage.**
@@ -135,32 +148,37 @@
 
 ## 5. TYPE-ICON — MAPPING & VỊ TRÍ
 
-| Type | Icon | Vị trí hiển thị | Ghi chú |
-|---|---|---|---|
-| `Live` | chấm đỏ + chữ "Live" | trước Title (màu đỏ `#AE2727`) | tin trực tiếp |
-| `Video` | ▶ play | **overlay giữa thumb** (+ icon nhỏ trước title khi no-thumb) | |
-| `Ảnh` | 📷 camera | badge góc thumb (+ trước title khi no-thumb) | có thể kèm số ảnh |
-| `Infographic` | icon infographic | trước Title | |
-| `Interactive` | icon interactive | trước Title | |
-| `Review` | icon review | trước Title | |
-| `Trắc nghiệm` | icon quiz | trước Title | |
-| `Tư vấn` | icon tư vấn | trước Title | |
-| `Audio` | 🎧 icon audio | trên thumb / trước Title | dùng cho Audio card |
-| `Longform` | (layout đặc biệt) | – | thường dark theme, full-bleed |
+| Type          | Icon                 | Vị trí hiển thị                             | Ghi chú                           |
+| ------------- | -------------------- | ------------------------------------------- | --------------------------------- |
+| `Live`        | chấm đỏ + chữ "Live" | trước Title (màu đỏ `#AE2727`)              | tin trực tiếp                     |
+| `Video`       | ▶ icon video         | **badge góc dưới trái thumb (bottom-left)** |                                   |
+| `Ảnh`         | 📷 camera            | **badge góc dưới trái thumb (bottom-left)** | có thể kèm số ảnh                 |
+| `VnEGO`       | icon VnEGO           | **badge góc dưới trái thumb (bottom-left)** |                                   |
+| `Infographic` | icon infographic     | **badge góc dưới trái thumb (bottom-left)** | (khi no-thumb thì để trước Title) |
+| `Tâm sự`      | icon tâm sự          | **badge góc dưới trái thumb (bottom-left)** |                                   |
+| `Spotlight`   | icon spotlight       | **badge góc dưới trái thumb (bottom-left)** |                                   |
+| `Interactive` | icon interactive     | trước Title                                 |                                   |
+| `Review`      | icon review          | trước Title                                 |                                   |
+| `Trắc nghiệm` | icon quiz            | trước Title                                 |                                   |
+| `Tư vấn`      | icon tư vấn          | trước Title                                 |                                   |
+| `Audio`       | 🎧 icon audio        | trên thumb / trước Title                    | dùng cho Audio card               |
+| `Longform`    | (layout đặc biệt)    | –                                           | thường dark theme, full-bleed     |
 
 ---
 
 ## 5b. MEDIA CARD (component riêng — KHÔNG dùng Block tin)
+
 Tách riêng vì có thành phần đặc thù: **tên show, thời lượng, overlay play, ratio riêng.**
 Dựng **1 component set `Media card`**, property `type = Short / Video / Audio`.
 
-| `type` | Thumb ratio | Slot hiển thị | Icon |
-|---|---|---|---|
-| **Short** (short video) | **4:5** | Title · tên show · **play overlay** | icon Video |
-| **Video** | **5:3** | Title · tên show · **thời lượng** | icon Video |
-| **Audio** | **5:3** | Title · tên show · **thời lượng** | icon Audio |
+| `type`                  | Thumb ratio | Slot hiển thị                       | Icon       |
+| ----------------------- | ----------- | ----------------------------------- | ---------- |
+| **Short** (short video) | **4:5**     | Title · tên show · **play overlay** | icon Video |
+| **Video**               | **5:3**     | Title · tên show · **thời lượng**   | icon Video |
+| **Audio**               | **5:3**     | Title · tên show · **thời lượng**   | icon Audio |
 
 **Anatomy:**
+
 ```
 ┌────────────┐
 │ Thumbnail  │🔌  ← Short=4:5, Video/Audio=5:3
@@ -173,6 +191,7 @@ Tên show 🔌         ← caption, màu phụ
 ```
 
 **Property:**
+
 - `type = Short / Video / Audio` (đổi ratio + icon + bật/tắt thời lượng & play overlay)
 - `Platform = PC / Mobile`
 - `show duration` (Video/Audio = on, Short = off)
@@ -184,36 +203,39 @@ Tên show 🔌         ← caption, màu phụ
 
 ## 6. STATES (chi tiết hành vi)
 
-| State | Title | Thumb | Meta | Ghi chú |
-|---|---|---|---|---|
-| **Default** | text mặc định `#222` | ảnh thật | hiện | – |
-| **Hover** | đổi sang **màu folder** tương ứng (hoặc primary) | overlay tối nhẹ / zoom 1.03 | giữ nguyên | cả block clickable |
-| **Visited** | `#757575` (xám) | giữ nguyên | giữ nguyên | đã đọc |
-| **Loading** | skeleton 2–3 dòng | block xám `#E5E5E5` đúng ratio | skeleton 1 dòng | shimmer `#F7F7F7` |
+| State       | Title                                            | Thumb                          | Meta            | Ghi chú            |
+| ----------- | ------------------------------------------------ | ------------------------------ | --------------- | ------------------ |
+| **Default** | text mặc định `#222`                             | ảnh thật                       | hiện            | –                  |
+| **Hover**   | đổi sang **màu folder** tương ứng (hoặc primary) | overlay tối nhẹ / zoom 1.03    | giữ nguyên      | cả block clickable |
+| **Visited** | `#757575` (xám)                                  | giữ nguyên                     | giữ nguyên      | đã đọc             |
+| **Loading** | skeleton 2–3 dòng                                | block xám `#E5E5E5` đúng ratio | skeleton 1 dòng | shimmer `#F7F7F7`  |
 
 ---
 
 ## 7. DATA BINDING (slot ← CMS field)
-*(Chi tiết quy tắc xem Phần 3 file tổng. Tóm tắt mapping:)*
 
-| Slot | Field CMS | Rule rỗng |
-|---|---|---|
-| Title | `title` | luôn có |
-| Thumbnail | `thumbnail` (theo ratio) | thiếu → placeholder cùng ratio |
-| Lead | `lead` | ẩn nếu size ≠ Topstory hoặc rỗng |
-| Timestamp | `published_at` | <24h relative, ≥24h "dd/mm" |
-| Location | `location` | null → ẩn slot |
-| Category | `category` (+ folder color) | – |
-| Comment count | `comment_count` | = 0 → ẩn slot |
-| Type-icon | `type` | quyết định icon + overlay |
-| Tag | `is_live` / `is_sponsored` | false → ẩn |
+_(Chi tiết quy tắc xem Phần 3 file tổng. Tóm tắt mapping:)_
+
+| Slot          | Field CMS                   | Rule rỗng                                                                                             |
+| ------------- | --------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Title         | `title`                     | luôn có                                                                                               |
+| Thumbnail     | `thumbnail` (theo ratio)    | thiếu → placeholder cùng ratio                                                                        |
+| Lead          | `lead`                      | ẩn nếu size ≠ Topstory hoặc rỗng                                                                      |
+| Timestamp     | `published_at`              | <24h relative, ≥24h "dd/mm"                                                                           |
+| Location      | `location`                  | null → ẩn slot                                                                                        |
+| Category      | `category` (+ folder color) | –                                                                                                     |
+| Comment count | `comment_count`             | ≤ 15 → ẩn. > 15 hiện sau Lead (nếu có đủ Title, Lead, Thumb) hoặc sau Title (nếu chỉ có Title, Thumb) |
+| Type-icon     | `type`                      | quyết định icon + overlay                                                                             |
+| Tag           | `is_live` / `is_sponsored`  | false → ẩn                                                                                            |
 
 > ⚠️ Slot rỗng phải **ẩn hẳn** (Auto Layout bỏ qua), không để khoảng trắng.
 
 ---
 
 ## 8. RESPONSIVE (PC ↔ Mobile) — khác bố cục
+
 > Khác bố cục → dựng riêng theo `Platform`. Bố cục từng size: **mục 4b**. Token chữ: **mục 3, 3b**.
+
 - **PC (grid 1100px, 12 col):** thumb góc vuông (0px); Standard grid (thumb-Top), Stream/Mini thumb-Left; có sidebar (trừ Landingpage).
 - **Mobile (414px, outer margin 20px → content 374px):** thumb bo `radius/thumb 3px`; **tin #1 = thumb-Top full-width (374)**, **tin 2→hết = title-led + thumb-Bottom**; chữ `list/title 18/150` & `list/lead 17/160`; **không sidebar**.
 - Title/Lead **fill-width**, không cố định px.
@@ -222,6 +244,7 @@ Tên show 🔌         ← caption, màu phụ
 ---
 
 ## 9. NAMING & TỔ CHỨC TRONG FIGMA
+
 - Component set: `Block tin`
 - Đặt tên layer slot rõ ràng để handoff dev: `slot/thumbnail`, `slot/type-icon`, `txt/title`, `txt/lead`, `meta/timestamp`…
 - Page Figma: `02 · Molecules / Block tin`
@@ -230,6 +253,7 @@ Tên show 🔌         ← caption, màu phụ
 ---
 
 ## 10. QA CHECKLIST (tick trước khi bàn giao)
+
 - [ ] Đủ các master ✅ ở mục 4 (hoặc bản rút gọn nếu bỏ `Platform`).
 - [ ] 4 state cho mỗi master (Default/Hover/Visited/Loading).
 - [ ] 6 boolean show/hide chạy đúng, slot rỗng ẩn hẳn (không hở khoảng trắng).
@@ -243,6 +267,7 @@ Tên show 🔌         ← caption, màu phụ
 ---
 
 ## 11. DO / DON'T
+
 - ✅ Dùng 1 component set + property → mọi vị trí chỉ là instance đổi property.
 - ✅ Ratio để ở component `Thumb`, không để ở Block tin.
 - ✅ Slot rỗng ẩn hẳn bằng Auto Layout.

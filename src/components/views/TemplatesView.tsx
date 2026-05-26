@@ -279,7 +279,10 @@ export function TemplatesView() {
                   <strong className="text-gray-900 block mb-0.5">
                     Cấu trúc Topstory (Cụm tin Top)
                   </strong>
-                  Gồm tổng cộng <strong className="text-[#9F224E]">3 tin</strong>. Bao gồm 1 tin kích thước to (số 1), 2 tin nhỏ ở cột giữa, sau đó đến list stream tin luôn.
+                  Gồm tổng cộng{" "}
+                  <strong className="text-[#9F224E]">3 tin</strong>. Bao gồm 1
+                  tin kích thước to (số 1), 2 tin nhỏ ở cột giữa, sau đó đến
+                  list stream tin luôn.
                 </p>
               </li>
               <li className="flex items-start gap-3">
@@ -290,7 +293,11 @@ export function TemplatesView() {
                   <strong className="text-gray-900 block mb-0.5">
                     Kích thước Thumbnail (Tin số 1)
                   </strong>
-                  Sử dụng thumb kích thước vừa: <strong className="font-mono bg-white border border-gray-200 px-1 rounded">498x299</strong> pixel.
+                  Sử dụng thumb kích thước vừa:{" "}
+                  <strong className="font-mono bg-white border border-gray-200 px-1 rounded">
+                    498x299
+                  </strong>{" "}
+                  pixel.
                 </p>
               </li>
               <li className="flex items-start gap-3">
