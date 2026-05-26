@@ -1,4 +1,16 @@
+import { CheckSquare, Square } from "lucide-react";
+
 export function TemplatesView() {
+  const checklist = [
+    { name: "Home", checked: false },
+    { name: "Folder", checked: false },
+    { name: "Detail", checked: false },
+    { name: "Detail Dark", checked: false },
+    { name: "Landingpage", checked: false },
+    { name: "Print", checked: false },
+    { name: "Mobile set", checked: false },
+  ];
+
   return (
     <div className="max-w-7xl mx-auto space-y-8">
       <div className="flex justify-between items-end mb-4">
@@ -10,6 +22,20 @@ export function TemplatesView() {
           <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full font-semibold">Status: Live</span>
         </div>
       </div>
+
+      <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm mb-8">
+        <h3 className="font-bold uppercase tracking-widest text-xs text-gray-400 mb-4 border-b border-gray-100 pb-2">Inventory Checklist</h3>
+        <div className="flex flex-wrap gap-x-6 gap-y-3">
+          {checklist.map((item, i) => (
+            <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
+              {item.checked ? <CheckSquare className="w-4 h-4 text-[#1DB549]" /> : <Square className="w-4 h-4 text-gray-300" />}
+              <span className={item.checked ? "font-medium" : "text-gray-500"}>
+                {item.name}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <div className="grid md:grid-cols-2 gap-6">
         <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col gap-6">

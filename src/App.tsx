@@ -5,20 +5,22 @@
 
 import { useState } from 'react';
 import { Sidebar } from './components/Sidebar';
-import { TokensView } from './components/views/TokensView';
-import { ComponentsView } from './components/views/ComponentsView';
-import { SpecsView } from './components/views/SpecsView';
-import { TemplatesView } from './components/views/TemplatesView';
 import { OverviewView } from './components/views/OverviewView';
-import { Palette, LayoutGrid, FileJson, LayoutTemplate, Settings2, Target } from 'lucide-react';
+import { TokensView } from './components/views/TokensView';
+import { AtomsView } from './components/views/AtomsView';
+import { MoleculesView } from './components/views/MoleculesView';
+import { OrganismsView } from './components/views/OrganismsView';
+import { TemplatesView } from './components/views/TemplatesView';
+import { Palette, Box, Layers, Columns, LayoutTemplate, Target } from 'lucide-react';
 import { NavItem } from './types';
 
 const NAV_ITEMS: NavItem[] = [
   { id: 'overview', label: 'Chiến dịch & Mục tiêu', icon: Target },
-  { id: 'tokens', label: 'Design Tokens', icon: Palette },
-  { id: 'components', label: 'Component Library', icon: LayoutGrid },
-  { id: 'templates', label: 'Template', icon: LayoutTemplate },
-  { id: 'specs', label: 'Data Specs', icon: FileJson },
+  { id: 'tokens', label: 'Tokens', icon: Palette },
+  { id: 'atoms', label: 'Atoms', icon: Box },
+  { id: 'molecules', label: 'Molecules', icon: Layers },
+  { id: 'organisms', label: 'Organisms', icon: Columns },
+  { id: 'templates', label: 'Templates', icon: LayoutTemplate },
 ];
 
 export default function App() {
@@ -50,9 +52,10 @@ export default function App() {
         <main className="grow p-8 flex flex-col bg-[#FDFDFD] overflow-y-auto w-full">
           {activeTab === 'overview' && <OverviewView />}
           {activeTab === 'tokens' && <TokensView />}
-          {activeTab === 'components' && <ComponentsView />}
+          {activeTab === 'atoms' && <AtomsView />}
+          {activeTab === 'molecules' && <MoleculesView />}
+          {activeTab === 'organisms' && <OrganismsView />}
           {activeTab === 'templates' && <TemplatesView />}
-          {activeTab === 'specs' && <SpecsView />}
         </main>
       </div>
 
