@@ -34,12 +34,6 @@ export default function App() {
           <div className="text-2xl font-black tracking-tighter uppercase">VnExpress <span className="font-light opacity-80">Design System</span></div>
           <span className="px-2 py-0.5 bg-white/20 text-[10px] rounded uppercase font-bold tracking-widest">v2.4.0</span>
         </div>
-        <div className="flex items-center gap-6 text-sm font-medium uppercase tracking-wider">
-          <a href="#" className="hover:opacity-70 transition-opacity">Guidelines</a>
-          <a href="#" className="hover:opacity-70 transition-opacity">Library</a>
-          <a href="#" className="hover:opacity-70 transition-opacity">Assets</a>
-          <button className="bg-white text-[#9F224E] px-4 py-1.5 rounded-full text-xs font-bold">Export Style Guide</button>
-        </div>
       </header>
 
       <div className="flex grow overflow-hidden">
