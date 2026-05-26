@@ -2,8 +2,6 @@ import { CheckSquare, Square } from "lucide-react";
 
 export function TemplatesView() {
   const checklist = [
-    { name: "Landingpage", checked: false },
-    { name: "Mobile set", checked: false },
     { name: "Template 1 (7 tin)", checked: false },
     { name: "Template 2 (8 tin)", checked: false },
     { name: "Template 3 (3 tin)", checked: false },
@@ -54,50 +52,7 @@ export function TemplatesView() {
       <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col gap-6">
         <div className="flex justify-between items-center border-b border-gray-100 pb-4">
           <h3 className="font-bold uppercase tracking-widest text-xs text-gray-400">
-            01 / Page Templates (Inventory)
-          </h3>
-        </div>
-        <div className="overflow-x-auto">
-          <table className="w-full text-left font-sans">
-            <thead className="bg-gray-50 border-b border-gray-100">
-              <tr>
-                <th className="px-4 py-3 font-mono text-[10px] text-gray-400 uppercase tracking-widest w-24">
-                  ID
-                </th>
-                <th className="px-4 py-3 font-mono text-[10px] text-gray-400 uppercase tracking-widest w-48">
-                  Template
-                </th>
-                <th className="px-4 py-3 font-mono text-[10px] text-gray-400 uppercase tracking-widest">
-                  Mô tả hiển thị
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-50 text-xs text-gray-600">
-              <tr className="hover:bg-gray-50/50">
-                <td className="px-4 py-3 font-mono text-[10px]">T05</td>
-                <td className="px-4 py-3 font-bold text-gray-900">
-                  Landingpage / Sự kiện
-                </td>
-                <td className="px-4 py-3">Header custom + box chuyên đề</td>
-              </tr>
-              <tr className="hover:bg-gray-50/50">
-                <td className="px-4 py-3 font-mono text-[10px]">T07</td>
-                <td className="px-4 py-3 font-bold text-[#9F224E]">
-                  Mobile Templates
-                </td>
-                <td className="px-4 py-3">
-                  Bản Mobile tóm gọn lại của T05 (Vertical Stack).
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col gap-6">
-        <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-          <h3 className="font-bold uppercase tracking-widest text-xs text-gray-400">
-            02 / Layout Templates: Cụm tin top
+            01 / Layout Templates: Cụm tin top
           </h3>
           <span className="text-xs text-gray-500 bg-gray-50 px-2 py-1 rounded">
             Áp dụng cho PC (có nhiều không gian bố trí)

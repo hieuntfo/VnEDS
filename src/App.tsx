@@ -57,7 +57,7 @@ export default function App() {
         <div>Platform: Web Desktop / Mobile Responsive / App iOS & Android</div>
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-green-500"></span> All Systems Sync</span>
-          <span>Global Brand Guidelines 2024 © VnExpress</span>
+          <span>Global Brand Guidelines 2026 © VnExpress</span>
         </div>
       </footer>
     </div>
