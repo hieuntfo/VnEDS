@@ -88,25 +88,20 @@ export function AtomsView() {
                 </td>
               </tr>
               <tr className="hover:bg-gray-50/50">
-                <td className="py-3 font-bold text-gray-900">Video</td>
-                <td className="py-3">
-                  ▶ Play{" "}
-                  <strong className="text-gray-900">overlay giữa thumb</strong>{" "}
-                  (hoặc nhỏ trước title nếu no-thumb).
+                <td className="py-3 font-bold text-gray-900">
+                  Video, Ảnh, VnEGO, Infographic, Tâm sự, Spotlight
                 </td>
-              </tr>
-              <tr className="hover:bg-gray-50/50">
-                <td className="py-3 font-bold text-gray-900">Ảnh</td>
                 <td className="py-3">
-                  📷 Camera{" "}
-                  <strong className="text-gray-900">badge góc thumb</strong>.
-                  Kèm số ảnh (tuỳ chọn).
+                  <strong className="text-gray-900">
+                    badge góc dưới trái thumb (bottom-left)
+                  </strong>
+                  . (Ảnh có thể kèm số ảnh tuỳ chọn).
                 </td>
               </tr>
               <tr className="hover:bg-gray-50/50">
                 <td className="py-3 font-bold text-gray-400">Khác...</td>
                 <td className="py-3 italic text-gray-500">
-                  (Infographic, Review, Trắc nghiệm...) Đặt icon trước Title.
+                  (Interactive, Review, Trắc nghiệm...) Đặt icon trước Title.
                 </td>
               </tr>
             </tbody>
