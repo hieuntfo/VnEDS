@@ -1,4 +1,4 @@
-import { CheckSquare, Square } from "lucide-react";
+import { CheckSquare, Square, Smartphone, Monitor } from "lucide-react";
 
 export function AdsView() {
   const checklist = [
@@ -82,23 +82,48 @@ export function AdsView() {
             <h4 className="font-bold text-gray-900 border-l-2 border-[#9F224E] pl-2 uppercase tracking-wide mb-4 text-sm">
               ADS Tin tức
             </h4>
-            <div className="bg-gray-50 p-6 border border-gray-200 rounded-xl relative">
-              <div className="absolute top-2 right-2 text-[10px] text-gray-400 font-mono">Ví dụ luồng tin (Stream)</div>
-              <div className="max-w-xl mx-auto border border-gray-200 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default flex gap-5">
-                 <div className="w-1/3 aspect-[4/3] bg-gray-200 rounded-md"></div>
-                 <div className="w-2/3 flex flex-col">
-                    <div className="text-lg font-bold text-gray-900 leading-snug mb-2 font-heading">
-                       Nhiều tiềm năng cho bất động sản phía Nam nhờ hạ tầng
-                    </div>
-                    <div className="text-sm text-gray-600 line-clamp-2 mb-3">
-                       Các dự án triển khai đón đầu hệ thống giao thông tại trung tâm, hứa hẹn gia tăng giá trị cho các nhà đầu tư trong bối cảnh thị trường đang hồi phục.
-                    </div>
-                    <div className="mt-auto flex items-center justify-between">
-                       <span className="text-[10px] uppercase font-bold text-gray-500 bg-gray-100 border border-gray-200 px-2 py-0.5 rounded tracking-wide">
-                          Tài trợ
-                       </span>
-                    </div>
-                 </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* PC Demo */}
+              <div className="bg-gray-50 p-6 border border-gray-200 rounded-xl relative">
+                <div className="absolute top-2 right-2 text-[10px] text-gray-400 font-mono flex items-center gap-1">
+                  <Monitor className="w-3 h-3" /> Desktop
+                </div>
+                <div className="mt-4 border border-gray-200 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default flex gap-5">
+                   <div className="w-1/3 aspect-[4/3] bg-gray-200 rounded-md"></div>
+                   <div className="w-2/3 flex flex-col">
+                      <div className="text-lg font-bold text-gray-900 leading-snug mb-2 font-heading">
+                         Nhiều tiềm năng cho bất động sản phía Nam nhờ hạ tầng
+                      </div>
+                      <div className="text-sm text-gray-600 line-clamp-2 mb-3">
+                         Các dự án triển khai đón đầu hệ thống giao thông tại trung tâm, hứa hẹn gia tăng giá trị cho các nhà đầu tư trong bối cảnh thị trường đang hồi phục.
+                      </div>
+                      <div className="mt-auto flex items-center justify-between">
+                         <span className="text-[10px] uppercase font-bold text-gray-500 bg-gray-100 border border-gray-200 px-2 py-0.5 rounded tracking-wide">
+                            Tài trợ
+                         </span>
+                      </div>
+                   </div>
+                </div>
+              </div>
+
+              {/* Mobile Demo */}
+              <div className="bg-gray-50 p-6 border border-gray-200 rounded-xl relative flex justify-center">
+                <div className="absolute top-2 right-2 text-[10px] text-gray-400 font-mono flex items-center gap-1">
+                  <Smartphone className="w-3 h-3" /> Mobile
+                </div>
+                <div className="mt-4 w-[320px] bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow p-3 flex gap-3">
+                   <div className="w-[100px] h-[75px] shrink-0 bg-gray-200 rounded-md"></div>
+                   <div className="flex flex-col flex-1">
+                      <div className="text-sm font-bold text-gray-900 leading-snug mb-2 font-heading line-clamp-3">
+                         Nhiều tiềm năng cho bất động sản phía Nam nhờ hạ tầng
+                      </div>
+                      <div className="mt-auto">
+                         <span className="text-[9px] uppercase font-bold text-gray-500 bg-gray-100 border border-gray-200 px-1.5 py-0.5 rounded tracking-wide">
+                            Tài trợ
+                         </span>
+                      </div>
+                   </div>
+                </div>
               </div>
             </div>
         </div>
@@ -107,26 +132,47 @@ export function AdsView() {
             <h4 className="font-bold text-gray-900 border-l-2 border-[#9F224E] pl-2 uppercase tracking-wide mb-4 text-sm">
                 ADS Non Tin tức (Display Banners)
             </h4>
-            <div className="grid gap-6">
-               <div className="bg-green-50/50 p-6 border border-green-100 rounded-xl">
-                   <div className="w-full h-[120px] bg-green-100 border-2 border-dashed border-green-400 rounded-lg flex flex-col items-center justify-center text-green-700 shadow-sm relative">
-                       <span className="font-bold uppercase tracking-widest">Masthead / Breakpage</span>
-                       <span className="font-mono text-xs opacity-75 mt-1">970 x 250</span>
-                       <span className="absolute top-2 left-2 text-[10px] font-bold bg-green-200 px-2 py-0.5 rounded text-green-800">ADS</span>
+            <div className="grid md:grid-cols-2 gap-6">
+               {/* PC Demo */}
+               <div className="bg-gray-50 p-6 border border-gray-200 rounded-xl relative">
+                   <div className="absolute top-2 right-2 text-[10px] text-gray-400 font-mono flex items-center gap-1">
+                     <Monitor className="w-3 h-3" /> Desktop
+                   </div>
+                   <div className="grid gap-4 mt-4">
+                     <div className="w-full h-[90px] bg-green-50 border border-dashed border-green-300 rounded-lg flex flex-col items-center justify-center text-green-700 shadow-sm relative">
+                         <span className="font-bold uppercase tracking-widest text-xs">Masthead</span>
+                         <span className="font-mono text-[10px] opacity-75 mt-1">970 x 250</span>
+                         <span className="absolute top-1 left-1 text-[8px] font-bold bg-green-200 px-1 py-0.5 rounded text-green-800">ADS</span>
+                     </div>
+                     <div className="flex gap-4">
+                       <div className="w-1/2 h-[200px] bg-white border flex items-center justify-center text-gray-400 text-xs text-center border-gray-200 rounded-lg">Content Cột trái</div>
+                       <div className="w-1/2 h-[200px] bg-green-50 border border-dashed border-green-300 rounded-lg flex flex-col items-center justify-center text-green-700 shadow-sm relative">
+                           <span className="font-bold uppercase tracking-widest text-xs text-center">Large 1</span>
+                           <span className="font-mono text-[10px] opacity-75 mt-2">300 x 600</span>
+                           <span className="absolute top-1 left-1 text-[8px] font-bold bg-green-200 px-1 py-0.5 rounded text-green-800">ADS</span>
+                       </div>
+                     </div>
                    </div>
                </div>
                
-               <div className="flex flex-wrap gap-6 bg-green-50/50 p-6 border border-green-100 rounded-xl">
-                   <div className="w-[300px] h-[600px] shrink-0 bg-green-100 border-2 border-dashed border-green-400 rounded-lg flex flex-col items-center justify-center text-green-700 shadow-sm relative">
-                       <span className="font-bold uppercase tracking-widest text-center">Large 1</span>
-                       <span className="font-mono text-xs opacity-75 mt-2">300 x 600</span>
-                       <span className="absolute top-2 left-2 text-[10px] font-bold bg-green-200 px-2 py-0.5 rounded text-green-800">ADS</span>
+               {/* Mobile Demo */}
+               <div className="bg-gray-50 p-6 border border-gray-200 rounded-xl relative flex justify-center">
+                   <div className="absolute top-2 right-2 text-[10px] text-gray-400 font-mono flex items-center gap-1">
+                     <Smartphone className="w-3 h-3" /> Mobile
                    </div>
-                   
-                   <div className="w-[300px] h-[250px] shrink-0 bg-green-100 border-2 border-dashed border-green-400 rounded-lg flex flex-col items-center justify-center text-green-700 shadow-sm relative">
-                       <span className="font-bold uppercase tracking-widest text-center leading-tight">Medium<br/>Rectangle</span>
-                       <span className="font-mono text-xs opacity-75 mt-2">300 x 250</span>
-                       <span className="absolute top-2 left-2 text-[10px] font-bold bg-green-200 px-2 py-0.5 rounded text-green-800">ADS</span>
+                   <div className="mt-4 w-[320px] bg-white border border-gray-200 rounded-lg shadow-sm p-3 flex flex-col gap-4">
+                       <div className="w-full h-[150px] shrink-0 bg-green-50 border border-dashed border-green-300 rounded-lg flex flex-col items-center justify-center text-green-700 relative">
+                           <span className="font-bold uppercase tracking-widest text-xs text-center leading-tight">Mobile Rectangle</span>
+                           <span className="font-mono text-[10px] opacity-75 mt-2">300 x 250</span>
+                           <span className="absolute top-1 left-1 text-[8px] font-bold bg-green-200 px-1 py-0.5 rounded text-green-800">ADS</span>
+                       </div>
+                       
+                       <div className="h-[200px] bg-gray-100 rounded flex items-center justify-center text-gray-400 text-xs">Content Tin tức</div>
+
+                       <div className="w-full h-[50px] shrink-0 bg-green-50 border border-dashed border-green-300 rounded-lg flex flex-col items-center justify-center text-green-700 relative">
+                           <span className="font-bold uppercase tracking-widest text-xs text-center leading-tight">Sticky Banner</span>
+                           <span className="absolute top-1 left-1 text-[8px] font-bold bg-green-200 px-1 py-0.5 rounded text-green-800">ADS</span>
+                       </div>
                    </div>
                </div>
             </div>
