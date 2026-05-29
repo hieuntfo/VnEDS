@@ -2,14 +2,14 @@ import { CheckSquare, Square } from "lucide-react";
 
 export function TemplatesView() {
   const checklist = [
-    { name: "Topstory T1 - 6 tin", checked: false },
-    { name: "Topstory T2 - 4 tin", checked: false },
-    { name: "Topstory T3 - 5 tin", checked: false },
-    { name: "Topstory T4 - 7 tin", checked: false },
+    { name: "Topstory T1 - 6 tin", checked: true },
+    { name: "Topstory T2 - 4 tin", checked: true },
+    { name: "Topstory T3 - 5 tin", checked: true },
+    { name: "Topstory T4 - 7 tin", checked: true },
   ];
 
   return (
-    <div className="max-w-7xl mx-auto space-y-8">
+    <div className="max-w-7xl mx-auto space-y-8 pb-32">
       <div className="flex justify-between items-end mb-4">
         <div>
           <h1 className="text-4xl font-heading italic text-gray-900 leading-none">
@@ -50,266 +50,278 @@ export function TemplatesView() {
         </div>
       </section>
 
-      <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col gap-6">
-        <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+      <section className="bg-white border border-gray-100 rounded-2xl shadow-sm flex flex-col gap-6 overflow-hidden">
+        <div className="flex justify-between items-center border-b border-gray-100 p-6 pb-4 bg-gray-50/50">
           <h3 className="font-bold uppercase tracking-widest text-xs text-gray-400">
             01 / Layout Templates: Cụm tin top
           </h3>
-          <span className="text-xs text-gray-500 bg-gray-50 px-2 py-1 rounded">
-            Áp dụng cho PC (có nhiều không gian bố trí)
+          <span className="text-xs text-gray-500 bg-white border border-gray-200 px-3 py-1 rounded shadow-sm">
+            Áp dụng cho PC (Grid 1160px)
           </span>
         </div>
 
-        <div className="flex flex-col gap-4">
+        {/* T1 */}
+        <div className="flex flex-col gap-4 p-6 pt-2">
           <div>
-            <h4 className="font-bold text-gray-900 border-l-2 border-[#9F224E] pl-2 uppercase tracking-wide mb-2 text-sm">
+            <h4 className="font-bold text-gray-900 border-l-3 border-[#9F224E] pl-3 uppercase tracking-wide mb-2 text-[15px]">
               Topstory T1 — 6 tin + Large 1
             </h4>
           </div>
-          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
-            <h5 className="text-[10px] uppercase font-bold text-gray-400 mb-3 tracking-widest">
-              Đặc tả chi tiết (Specs)
-            </h5>
-            <ul className="text-xs text-gray-700 space-y-3 font-sans">
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
-                <p>Gồm tổng cộng <strong className="text-[#9F224E]">6 tin</strong>.</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
-                <p>Kích thước Thumbnail (Tin số 1): <strong className="font-mono bg-white border border-gray-200 px-1 rounded">500x300</strong> pixel.</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
-                <p>Quảng cáo: <strong className="text-[#1DB549]">Có Large 1</strong> trên màn hình.</p>
-              </li>
-            </ul>
-          </div>
           
-          <div className="p-6 bg-gray-50 rounded-xl border border-gray-200 relative overflow-hidden hidden md:block">
-            <div className="text-[10px] uppercase font-bold text-gray-400 mb-4 tracking-widest">Demo Layout (Structural Wireframe) - PC</div>
-            <div className="flex gap-6 max-w-5xl mx-auto">
-              <div className="flex-[3] flex flex-col gap-4">
-                <div className="flex gap-4">
-                  <div className="flex-[2] bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden flex flex-col relative group cursor-pointer hover:border-[#9F224E]/50 transition-colors">
-                     <div className="aspect-[5/3] bg-gray-200 w-full relative">
-                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                       <div className="absolute bottom-2 left-2 text-[10px] text-white bg-black/50 px-2 py-0.5 rounded font-mono">500x300</div>
-                     </div>
-                     <div className="p-4">
-                       <div className="h-5 w-[90%] bg-gray-800 rounded mb-3 group-hover:bg-[#9F224E] transition-colors"></div>
-                       <div className="h-3 w-full bg-gray-300 rounded mb-2"></div>
-                       <div className="h-3 w-4/5 bg-gray-300 rounded"></div>
-                     </div>
-                  </div>
-                  <div className="flex-1 flex flex-col gap-4">
-                    <div className="flex-1 bg-white border border-gray-200 rounded-lg shadow-sm p-4 hover:border-[#9F224E]/50 transition-colors cursor-pointer group">
-                      <div className="h-4 w-[95%] bg-gray-800 rounded mb-3 group-hover:text-[#9F224E]"></div>
-                      <div className="h-3 w-5/6 bg-gray-400/50 rounded mb-2"></div>
-                      <div className="h-3 w-1/2 bg-gray-400/50 rounded"></div>
+          <div className="bg-white rounded-xl border border-gray-200 relative overflow-hidden overflow-x-auto shadow-sm">
+            <div className="bg-gray-100 px-4 py-2 border-b border-gray-200 text-[10px] uppercase font-bold text-gray-500 tracking-widest">
+              Giao diện thực tế (Pixel Perfect)
+            </div>
+            <div className="p-8 min-w-[1000px]">
+              <div className="flex gap-6 max-w-[1100px] mx-auto">
+                <div className="flex-[3] flex flex-col gap-6">
+                  {/* Top Part */}
+                  <div className="flex gap-6">
+                    {/* Big article */}
+                    <div className="flex-[2] flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h2 className="text-[22px] font-bold font-heading mb-2 leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Nga thay tỉnh trưởng hai vùng giáp Ukraine</h2>
+                      <p className="text-[14px] text-[#4F4F4F] mb-3 leading-[1.6]">Điện Kremlin cho biết tỉnh trưởng hai vùng Belgorod, Bryansk đã xin từ chức và được Tổng thống Putin bổ nhiệm người thay thế.</p>
+                      <div className="text-[13px] text-[#757575] font-sans">9h trước &nbsp;&nbsp;&nbsp; Quốc tế</div>
                     </div>
-                    <div className="flex-1 bg-white border border-gray-200 rounded-lg shadow-sm p-4 hover:border-[#9F224E]/50 transition-colors cursor-pointer group">
-                      <div className="h-4 w-[90%] bg-gray-800 rounded mb-3 group-hover:text-[#9F224E]"></div>
-                      <div className="h-3 w-5/6 bg-gray-400/50 rounded mb-2"></div>
-                      <div className="h-3 w-1/2 bg-gray-400/50 rounded"></div>
+                    
+                    {/* Right 2 articles */}
+                    <div className="flex-1 flex flex-col gap-6">
+                      <div className="flex flex-col group cursor-pointer">
+                        <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                        <h3 className="text-[16px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Iran dọa đáp trả vụ Kuwait bắt 4 binh sĩ</h3>
+                      </div>
+                      <div className="flex flex-col group cursor-pointer">
+                        <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                        <h3 className="text-[16px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Vị thế thay đổi của Trung Quốc trong quan hệ với Mỹ sau 10 năm</h3>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Divider */}
+                  <div className="w-full h-px bg-gray-200"></div>
+                  
+                  {/* Bottom 3 articles */}
+                  <div className="grid grid-cols-3 gap-6">
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[16px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Sức mạnh tàu ngầm hạt nhân Mỹ dùng để 'dằn mặt Iran'</h3>
+                    </div>
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[16px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Bình Nhưỡng tắc đường vì số lượng ôtô bùng nổ</h3>
+                    </div>
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[16px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Cuộc đua bảo vệ 'chấm xanh giữa biển đỏ' của đảng Dân chủ</h3>
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4 border-t border-gray-200 pt-4">
-                  {[1, 2, 3].map(i => (
-                    <div key={i} className="bg-white border border-transparent hover:border-gray-200 rounded p-2 -mx-2 transition-colors cursor-pointer group">
-                      <div className="h-4 w-full bg-gray-800 rounded mb-2 group-hover:bg-[#9F224E]"></div>
-                      <div className="h-3 w-[80%] bg-gray-400/50 rounded"></div>
-                    </div>
-                  ))}
+                
+                {/* Large 1 Ad */}
+                <div className="w-[300px] shrink-0 bg-[#EFCB59] flex flex-col items-center justify-center relative min-h-[600px] hover:brightness-95 transition-all cursor-pointer">
+                  <div className="text-center text-[#111]">
+                    <div className="font-bold text-3xl mb-3 font-heading">Large 1</div>
+                    <div className="text-[15px] font-medium mb-1">300x600</div>
+                    <div className="w-12 h-[1px] bg-black/60 mx-auto mb-4"></div>
+                    <div className="text-[14px]">Tối ưu khi sticky (dính) 5s</div>
+                  </div>
                 </div>
-              </div>
-              <div className="w-[300px] shrink-0 bg-green-50 border border-green-200 border-dashed text-green-700 rounded-lg flex flex-col items-center justify-center font-mono text-[10px] text-center shadow-sm relative">
-                <span className="absolute top-2 left-2 bg-green-200 text-green-800 px-1.5 py-0.5 rounded font-bold">ADS</span>
-                <strong className="text-sm tracking-widest uppercase">Large 1</strong><br/>300x600<br/>(Cột phải)
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pt-8 border-t border-gray-100 mt-2">
+        {/* T2 */}
+        <div className="flex flex-col gap-4 p-6 pt-8 border-t border-gray-100">
           <div>
-            <h4 className="font-bold text-gray-900 border-l-2 border-[#9F224E] pl-2 uppercase tracking-wide mb-2 text-sm">
+            <h4 className="font-bold text-gray-900 border-l-3 border-[#9F224E] pl-3 uppercase tracking-wide mb-2 text-[15px]">
               Topstory T2 — 4 tin + Large 1
             </h4>
           </div>
-          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
-            <h5 className="text-[10px] uppercase font-bold text-gray-400 mb-3 tracking-widest">
-              Đặc tả chi tiết (Specs)
-            </h5>
-            <ul className="text-xs text-gray-700 space-y-3 font-sans">
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
-                <p>Gồm tổng cộng <strong className="text-[#9F224E]">4 tin</strong>.</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
-                <p>Kích thước Thumbnail (Tin số 1): <strong className="font-mono bg-white border border-gray-200 px-1 rounded">513x308</strong> pixel.</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
-                <p>Quảng cáo: <strong className="text-[#1DB549]">Có Large 1</strong> trên màn hình.</p>
-              </li>
-            </ul>
-          </div>
-
-          <div className="p-6 bg-gray-50 rounded-xl border border-gray-200 relative overflow-hidden hidden md:block">
-            <div className="text-[10px] uppercase font-bold text-gray-400 mb-4 tracking-widest">Demo Layout (Structural Wireframe) - PC</div>
-            <div className="flex gap-6 max-w-5xl mx-auto">
-              <div className="flex-[3] flex flex-col gap-4">
-                  <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden flex flex-col relative w-full lg:w-[65%] group cursor-pointer hover:border-[#9F224E]/50 transition-colors">
-                     <div className="aspect-[513/308] bg-gray-200 w-full relative">
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                        <div className="absolute bottom-2 left-2 text-[10px] text-white bg-black/50 px-2 py-0.5 rounded font-mono">513x308</div>
-                     </div>
-                     <div className="p-4">
-                       <div className="h-5 w-[90%] bg-gray-800 rounded mb-3 group-hover:bg-[#9F224E] transition-colors"></div>
-                       <div className="h-3 w-full bg-gray-300 rounded mb-2"></div>
-                       <div className="h-3 w-2/3 bg-gray-300 rounded"></div>
-                     </div>
-                  </div>
-                <div className="grid grid-cols-3 gap-4 border-t border-gray-200 pt-4">
-                  {[1, 2, 3].map(i => (
-                    <div key={i} className="bg-white border border-transparent hover:border-gray-200 rounded p-2 -mx-2 transition-colors cursor-pointer group">
-                      <div className="h-4 w-full bg-gray-800 rounded mb-2 group-hover:bg-[#9F224E]"></div>
-                      <div className="h-3 w-[80%] bg-gray-400/50 rounded"></div>
+          <div className="bg-white rounded-xl border border-gray-200 relative overflow-hidden overflow-x-auto shadow-sm">
+            <div className="bg-gray-100 px-4 py-2 border-b border-gray-200 text-[10px] uppercase font-bold text-gray-500 tracking-widest">
+              Giao diện thực tế (Pixel Perfect)
+            </div>
+            <div className="p-8 min-w-[1000px]">
+              <div className="flex gap-6 max-w-[1100px] mx-auto">
+                <div className="flex-[3] flex flex-col gap-6">
+                  {/* Top Part */}
+                  <div className="flex gap-6">
+                    {/* Big image */}
+                    <div className="w-[52%] shrink-0 group cursor-pointer">
+                      <div className="w-full aspect-[513/320] bg-[#F2F2F2] transition-colors group-hover:bg-[#E5E5E5]"></div>
                     </div>
-                  ))}
+                    
+                    {/* Right Text */}
+                    <div className="flex-1 flex flex-col justify-start pt-1 group cursor-pointer">
+                      <h2 className="text-[24px] font-bold font-heading mb-3 leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Chuyển đổi quỹ đất xây nhà xã hội sang thương mại tại dự án Vinhomes</h2>
+                      <p className="text-[15px] text-[#4F4F4F] mb-4 leading-[1.6]">Khu đô thị nghỉ dưỡng Mỹ Lâm của Vinhomes được điều chỉnh quy hoạch, chuyển đổi gần 23 ha đất xây nhà xã hội sang nhà thương mại.</p>
+                      <div className="text-[13px] text-[#757575] font-sans">9h trước &nbsp;&nbsp;&nbsp; Quốc tế</div>
+                    </div>
+                  </div>
+                  
+                  {/* Divider */}
+                  <div className="w-full h-px bg-gray-200"></div>
+                  
+                  {/* Bottom 3 articles */}
+                  <div className="grid grid-cols-3 gap-6">
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[16px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Sức mạnh tàu ngầm hạt nhân Mỹ dùng để 'dằn mặt Iran'</h3>
+                    </div>
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[16px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Bình Nhưỡng tắc đường vì số lượng ôtô bùng nổ</h3>
+                    </div>
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[16px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Cuộc đua bảo vệ 'chấm xanh giữa biển đỏ' của đảng Dân chủ</h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="w-[300px] shrink-0 bg-green-50 border border-green-200 border-dashed text-green-700 rounded-lg flex flex-col items-center justify-center font-mono text-[10px] text-center shadow-sm relative">
-                <span className="absolute top-2 left-2 bg-green-200 text-green-800 px-1.5 py-0.5 rounded font-bold">ADS</span>
-                <strong className="text-sm tracking-widest uppercase">Large 1</strong><br/>300x600<br/>(Cột phải)
+                
+                {/* Large 1 Ad */}
+                <div className="w-[300px] shrink-0 bg-[#EFCB59] flex flex-col items-center justify-center relative min-h-[600px] hover:brightness-95 transition-all cursor-pointer">
+                  <div className="text-center text-[#111]">
+                    <div className="font-bold text-3xl mb-3 font-heading">Large 1</div>
+                    <div className="text-[15px] font-medium mb-1">300x600</div>
+                    <div className="w-12 h-[1px] bg-black/60 mx-auto mb-4"></div>
+                    <div className="text-[14px]">Tối ưu khi sticky (dính) 5s</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pt-8 border-t border-gray-100 mt-2">
+        {/* T3 */}
+        <div className="flex flex-col gap-4 p-6 pt-8 border-t border-gray-100">
           <div>
-            <h4 className="font-bold text-gray-900 border-l-2 border-[#9F224E] pl-2 uppercase tracking-wide mb-2 text-sm">
+            <h4 className="font-bold text-gray-900 border-l-3 border-[#9F224E] pl-3 uppercase tracking-wide mb-2 text-[15px]">
               Topstory T3 — 5 tin + Large 1
             </h4>
           </div>
-          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
-            <h5 className="text-[10px] uppercase font-bold text-gray-400 mb-3 tracking-widest">
-              Đặc tả chi tiết (Specs)
-            </h5>
-            <ul className="text-xs text-gray-700 space-y-3 font-sans">
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
-                <p>Gồm tổng cộng <strong className="text-[#9F224E]">5 tin</strong>.</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
-                <p>Kích thước Thumbnail (Tin số 1): <strong className="font-mono bg-white border border-gray-200 px-1 rounded">760x456</strong> pixel.</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
-                <p>Quảng cáo: <strong className="text-[#1DB549]">Có Large 1</strong> trên màn hình.</p>
-              </li>
-            </ul>
-          </div>
-
-          <div className="p-6 bg-gray-50 rounded-xl border border-gray-200 relative overflow-hidden hidden md:block">
-            <div className="text-[10px] uppercase font-bold text-gray-400 mb-4 tracking-widest">Demo Layout (Structural Wireframe) - PC</div>
-            <div className="flex gap-6 max-w-5xl mx-auto">
-              <div className="flex-[3] flex flex-col gap-4">
-                  <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden flex flex-col relative w-full group cursor-pointer hover:border-[#9F224E]/50 transition-colors">
-                     <div className="aspect-[760/456] bg-gray-200 w-full relative">
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                        <div className="absolute bottom-3 left-3 text-[12px] text-white bg-black/50 px-2 py-1 rounded font-mono">760x456</div>
-                     </div>
-                     <div className="p-5">
-                       <div className="h-6 w-[95%] bg-gray-800 rounded mb-3 group-hover:bg-[#9F224E] transition-colors"></div>
-                       <div className="h-4 w-full bg-gray-300 rounded mb-2"></div>
-                       <div className="h-4 w-4/5 bg-gray-300 rounded"></div>
-                     </div>
+          <div className="bg-white rounded-xl border border-gray-200 relative overflow-hidden overflow-x-auto shadow-sm">
+            <div className="bg-gray-100 px-4 py-2 border-b border-gray-200 text-[10px] uppercase font-bold text-gray-500 tracking-widest">
+              Giao diện thực tế (Pixel Perfect)
+            </div>
+            <div className="p-8 min-w-[1000px]">
+              <div className="flex gap-6 max-w-[1100px] mx-auto">
+                <div className="flex-[3] flex flex-col gap-6">
+                  {/* Top Part */}
+                  <div className="flex flex-col group cursor-pointer">
+                    <div className="w-full aspect-[760/420] bg-[#F2F2F2] mb-5 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                    <h2 className="text-[28px] font-bold font-heading mb-3 leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Quốc hội dự kiến dành một tuần làm công tác nhân sự tại Kỳ họp thứ nhất</h2>
+                    <p className="text-[16px] text-[#4F4F4F] leading-[1.6]">Chủ tịch Quốc hội Trần Thanh Mẫn cho biết Kỳ họp thứ nhất Quốc hội khóa 16 sẽ diễn ra 2 đợt, trong đó đợt 1 dự kiến dành khoảng một tuần để làm công tác nhân sự.</p>
                   </div>
-                <div className="grid grid-cols-4 gap-4 border-t border-gray-200 pt-4">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="bg-white border border-transparent hover:border-gray-200 rounded p-2 -mx-2 transition-colors cursor-pointer group">
-                      <div className="h-4 w-full bg-gray-800 rounded mb-2 group-hover:bg-[#9F224E]"></div>
-                      <div className="h-3 w-[85%] bg-gray-400/50 rounded"></div>
+                  
+                  {/* Divider */}
+                  <div className="w-full h-px bg-gray-200"></div>
+                  
+                  {/* Bottom 4 articles */}
+                  <div className="grid grid-cols-4 gap-6">
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[15px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Bộ Chính trị định hình TP HCM thành đô thị toàn cầu vào 2075</h3>
                     </div>
-                  ))}
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[15px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">'Việt Nam cần chuyển sang nền kinh tế vận hành bằng công nghệ'</h3>
+                    </div>
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[15px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Thủ tướng yêu cầu Hà Nội khởi công một số dự án nhà ở cho thuê trong tháng 6</h3>
+                    </div>
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[15px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Lào Cai, Hải Phòng muốn thí điểm mô hình xã hội chủ nghĩa</h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="w-[300px] shrink-0 bg-green-50 border border-green-200 border-dashed text-green-700 rounded-lg flex flex-col items-center justify-center font-mono text-[10px] text-center shadow-sm relative">
-                <span className="absolute top-2 left-2 bg-green-200 text-green-800 px-1.5 py-0.5 rounded font-bold">ADS</span>
-                <strong className="text-sm tracking-widest uppercase">Large 1</strong><br/>300x600<br/>(Cột phải)
+                
+                {/* Large 1 Ad */}
+                <div className="w-[300px] shrink-0 bg-[#EFCB59] flex flex-col items-center justify-center relative min-h-[600px] hover:brightness-95 transition-all cursor-pointer">
+                  <div className="text-center text-[#111]">
+                    <div className="font-bold text-3xl mb-3 font-heading">Large 1</div>
+                    <div className="text-[15px] font-medium mb-1">300x600</div>
+                    <div className="w-12 h-[1px] bg-black/60 mx-auto mb-4"></div>
+                    <div className="text-[14px]">Tối ưu khi sticky (dính) 5s</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pt-8 border-t border-gray-100 mt-2">
+        {/* T4 */}
+        <div className="flex flex-col gap-4 p-6 pt-8 border-t border-gray-100">
           <div>
-            <h4 className="font-bold text-gray-900 border-l-2 border-[#9F224E] pl-2 uppercase tracking-wide mb-2 text-sm">
-              Topstory T4 — 7 tin
+            <h4 className="font-bold text-gray-900 border-l-3 border-[#9F224E] pl-3 uppercase tracking-wide mb-2 text-[15px]">
+              Topstory T4 — 7 tin + Breakpage 1
             </h4>
           </div>
-          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
-            <h5 className="text-[10px] uppercase font-bold text-gray-400 mb-3 tracking-widest">
-              Đặc tả chi tiết (Specs)
-            </h5>
-            <ul className="text-xs text-gray-700 space-y-3 font-sans">
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
-                <p>Gồm tổng cộng <strong className="text-[#9F224E]">7 tin</strong>.</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
-                <p>Kích thước Thumbnail (Tin số 1): <strong className="font-mono bg-white border border-gray-200 px-1 rounded">760x456</strong> pixel.</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full bg-[#FFE7E9] text-[#9F224E] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
-                <p>Quảng cáo: <strong className="text-[#9F224E]">KHÔNG Large 1</strong> trên mảng khối.</p>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="p-6 bg-gray-50 rounded-xl border border-gray-200 relative overflow-hidden hidden md:block">
-            <div className="text-[10px] uppercase font-bold text-gray-400 mb-4 tracking-widest">Demo Layout (Structural Wireframe) - PC</div>
-            <div className="w-full flex gap-6 max-w-5xl mx-auto">
-              <div className="w-full flex flex-col gap-4">
-                <div className="flex gap-6">
-                  <div className="flex-[5] bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden flex flex-col relative w-full group cursor-pointer hover:border-[#9F224E]/50 transition-colors">
-                     <div className="aspect-[760/456] bg-gray-200 w-full relative">
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                        <div className="absolute bottom-3 left-3 text-[12px] text-white bg-black/50 px-2 py-1 rounded font-mono">760x456</div>
-                     </div>
-                     <div className="p-5">
-                       <div className="h-6 w-[95%] bg-gray-800 rounded mb-3 group-hover:bg-[#9F224E] transition-colors"></div>
-                       <div className="h-4 w-full bg-gray-300 rounded mb-2"></div>
-                       <div className="h-4 w-5/6 bg-gray-300 rounded border-b border-gray-100 pb-4"></div>
-                     </div>
-                  </div>
-                  <div className="flex-[2] flex flex-col gap-4 border-l border-gray-200 pl-6">
-                    <div className="flex-1 border-b border-gray-200 pb-4 cursor-pointer group">
-                      <div className="h-5 w-full bg-gray-800 rounded mb-3 group-hover:bg-[#9F224E] transition-colors"></div>
-                      <div className="h-3 w-5/6 bg-gray-400/50 rounded mb-2"></div>
-                      <div className="h-3 w-1/2 bg-gray-400/50 rounded"></div>
+          <div className="bg-white rounded-xl border border-gray-200 relative overflow-hidden overflow-x-auto shadow-sm">
+            <div className="bg-gray-100 px-4 py-2 border-b border-gray-200 text-[10px] uppercase font-bold text-gray-500 tracking-widest">
+              Giao diện thực tế (Pixel Perfect)
+            </div>
+            <div className="p-8 min-w-[1000px]">
+              <div className="w-full flex gap-6 max-w-[1100px] mx-auto">
+                <div className="w-full flex flex-col gap-6">
+                  {/* Top Part */}
+                  <div className="flex gap-6">
+                    {/* Big article */}
+                    <div className="flex-[6] flex flex-col pr-2 group cursor-pointer">
+                      <div className="w-full aspect-[2/1] bg-[#F2F2F2] mb-5 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h2 className="text-[28px] font-bold font-heading mb-3 leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Quốc hội dự kiến dành một tuần làm công tác nhân sự tại Kỳ họp thứ nhất</h2>
+                      <p className="text-[16px] text-[#4F4F4F] leading-[1.6]">Chủ tịch Quốc hội Trần Thanh Mẫn cho biết Kỳ họp thứ nhất Quốc hội khóa 16 sẽ diễn ra 2 đợt, trong đó đợt 1 dự kiến dành khoảng một tuần để làm công tác nhân sự.</p>
                     </div>
-                    <div className="flex-1 pt-2 cursor-pointer group">
-                      <div className="h-5 w-full bg-gray-800 rounded mb-3 group-hover:bg-[#9F224E] transition-colors"></div>
-                      <div className="h-3 w-5/6 bg-gray-400/50 rounded mb-2"></div>
-                      <div className="h-3 w-1/2 bg-gray-400/50 rounded"></div>
+                    
+                    {/* Right 2 articles - stacked */}
+                    <div className="flex-[3] flex flex-col gap-5">
+                      <div className="flex flex-col gap-3 group cursor-pointer">
+                        <div className="w-full aspect-[5/3] bg-[#F2F2F2] transition-colors group-hover:bg-[#E5E5E5]"></div>
+                        <h3 className="text-[17px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">TP HCM sẽ rà soát lãnh đạo sau một năm vận hành chính quyền hai cấp</h3>
+                      </div>
+                      <div className="flex flex-col gap-3 group cursor-pointer">
+                        <div className="w-full aspect-[5/3] bg-[#F2F2F2] transition-colors group-hover:bg-[#E5E5E5]"></div>
+                        <h3 className="text-[17px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Bộ Chính trị yêu cầu TP HCM hoàn thành 200 km metro vào năm 2030</h3>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="grid grid-cols-4 gap-6 border-t border-gray-200 pt-4">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="cursor-pointer group">
-                      <div className="h-5 w-full bg-gray-800 rounded mb-2 group-hover:bg-[#9F224E] transition-colors"></div>
-                      <div className="h-3 w-[85%] bg-gray-400/50 rounded"></div>
+                  
+                  {/* Divider */}
+                  <div className="w-full h-px bg-gray-200 mt-2 mb-2"></div>
+                  
+                  {/* Bottom 4 articles */}
+                  <div className="grid grid-cols-4 gap-6">
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[15px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Bộ Chính trị định hình TP HCM thành đô thị toàn cầu vào 2075</h3>
                     </div>
-                  ))}
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[15px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">'Việt Nam cần chuyển sang nền kinh tế vận hành bằng công nghệ'</h3>
+                    </div>
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[15px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Thủ tướng yêu cầu Hà Nội khởi công một số dự án nhà ở cho thuê trong tháng 6</h3>
+                    </div>
+                    <div className="flex flex-col group cursor-pointer">
+                      <div className="w-full aspect-[5/3.2] bg-[#F2F2F2] mb-3 transition-colors group-hover:bg-[#E5E5E5]"></div>
+                      <h3 className="text-[15px] font-bold font-heading leading-snug text-[#222] group-hover:text-[#9F224E] transition-colors">Lào Cai, Hải Phòng muốn thí điểm mô hình xã hội chủ nghĩa</h3>
+                    </div>
+                  </div>
+                  
+                  {/* Breakpage Ad */}
+                  <div className="w-full h-[250px] bg-[#EFCB59] mt-8 flex flex-col items-center justify-center hover:brightness-95 transition-all cursor-pointer">
+                     <div className="text-center text-[#111]">
+                       <div className="font-bold text-[32px] mb-3 font-heading tracking-wide">Breakpage 1</div>
+                       <div className="text-[15px] font-medium mb-2 font-sans">1100x250, 970x250, 970x90</div>
+                       <div className="w-16 h-[1px] bg-black/60 mx-auto mb-4"></div>
+                       <div className="text-[15px] font-sans"><strong>[OV]</strong> Chạy video Outstream cho đối tác, size có thể<br/>1100x450</div>
+                     </div>
+                  </div>
                 </div>
               </div>
             </div>
