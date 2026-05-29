@@ -366,7 +366,7 @@ export function TokensView() {
                       Font Lead (#4F4F4F)
                     </span>
                     <span className="font-mono text-[10px] bg-gray-50 px-2 py-1 rounded w-max">
-                      16px / 160% / Regular / Arial
+                      14px / 140% / Regular / Arial
                     </span>
                   </li>
                 </ul>
@@ -382,7 +382,7 @@ export function TokensView() {
                       Font Title (#222)
                     </span>
                     <span className="font-mono text-[10px] bg-[#FFE7E9] text-[#9F224E] font-bold px-2 py-1 rounded w-max">
-                      18px / 150% / Bold / Merriweather*
+                      18px / 160% / Bold / Merriweather*
                     </span>
                   </li>
                   <li className="flex flex-col pb-1">

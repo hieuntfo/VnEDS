@@ -11,7 +11,8 @@ import { AtomsView } from './components/views/AtomsView';
 import { MoleculesView } from './components/views/MoleculesView';
 import { OrganismsView } from './components/views/OrganismsView';
 import { TemplatesView } from './components/views/TemplatesView';
-import { Palette, Box, Layers, Columns, LayoutTemplate, Target } from 'lucide-react';
+import { AdsView } from './components/views/AdsView';
+import { Palette, Box, Layers, Columns, LayoutTemplate, Target, Megaphone } from 'lucide-react';
 import { NavItem } from './types';
 
 const NAV_ITEMS: NavItem[] = [
@@ -21,6 +22,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'molecules', label: 'Molecules', icon: Layers },
   { id: 'organisms', label: 'Organisms', icon: Columns },
   { id: 'templates', label: 'Templates', icon: LayoutTemplate },
+  { id: 'ads', label: 'Quảng cáo (Ads)', icon: Megaphone },
 ];
 
 export default function App() {
@@ -50,6 +52,7 @@ export default function App() {
           {activeTab === 'molecules' && <MoleculesView />}
           {activeTab === 'organisms' && <OrganismsView />}
           {activeTab === 'templates' && <TemplatesView />}
+          {activeTab === 'ads' && <AdsView />}
         </main>
       </div>
 
