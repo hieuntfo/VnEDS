@@ -77,6 +77,60 @@ export function AdsView() {
             </li>
           </ul>
         </div>
+
+        <div className="pt-6 border-t border-gray-100">
+            <h4 className="font-bold text-gray-900 border-l-2 border-[#9F224E] pl-2 uppercase tracking-wide mb-4 text-sm">
+              ADS Tin tức
+            </h4>
+            <div className="bg-gray-50 p-6 border border-gray-200 rounded-xl relative">
+              <div className="absolute top-2 right-2 text-[10px] text-gray-400 font-mono">Ví dụ luồng tin (Stream)</div>
+              <div className="max-w-xl mx-auto border border-gray-200 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default flex gap-5">
+                 <div className="w-1/3 aspect-[4/3] bg-gray-200 rounded-md"></div>
+                 <div className="w-2/3 flex flex-col">
+                    <div className="text-lg font-bold text-gray-900 leading-snug mb-2 font-heading">
+                       Nhiều tiềm năng cho bất động sản phía Nam nhờ hạ tầng
+                    </div>
+                    <div className="text-sm text-gray-600 line-clamp-2 mb-3">
+                       Các dự án triển khai đón đầu hệ thống giao thông tại trung tâm, hứa hẹn gia tăng giá trị cho các nhà đầu tư trong bối cảnh thị trường đang hồi phục.
+                    </div>
+                    <div className="mt-auto flex items-center justify-between">
+                       <span className="text-[10px] uppercase font-bold text-gray-500 bg-gray-100 border border-gray-200 px-2 py-0.5 rounded tracking-wide">
+                          Tài trợ
+                       </span>
+                    </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+
+        <div className="pt-6 border-t border-gray-100">
+            <h4 className="font-bold text-gray-900 border-l-2 border-[#9F224E] pl-2 uppercase tracking-wide mb-4 text-sm">
+                ADS Non Tin tức (Display Banners)
+            </h4>
+            <div className="grid gap-6">
+               <div className="bg-green-50/50 p-6 border border-green-100 rounded-xl">
+                   <div className="w-full h-[120px] bg-green-100 border-2 border-dashed border-green-400 rounded-lg flex flex-col items-center justify-center text-green-700 shadow-sm relative">
+                       <span className="font-bold uppercase tracking-widest">Masthead / Breakpage</span>
+                       <span className="font-mono text-xs opacity-75 mt-1">970 x 250</span>
+                       <span className="absolute top-2 left-2 text-[10px] font-bold bg-green-200 px-2 py-0.5 rounded text-green-800">ADS</span>
+                   </div>
+               </div>
+               
+               <div className="flex flex-wrap gap-6 bg-green-50/50 p-6 border border-green-100 rounded-xl">
+                   <div className="w-[300px] h-[600px] shrink-0 bg-green-100 border-2 border-dashed border-green-400 rounded-lg flex flex-col items-center justify-center text-green-700 shadow-sm relative">
+                       <span className="font-bold uppercase tracking-widest text-center">Large 1</span>
+                       <span className="font-mono text-xs opacity-75 mt-2">300 x 600</span>
+                       <span className="absolute top-2 left-2 text-[10px] font-bold bg-green-200 px-2 py-0.5 rounded text-green-800">ADS</span>
+                   </div>
+                   
+                   <div className="w-[300px] h-[250px] shrink-0 bg-green-100 border-2 border-dashed border-green-400 rounded-lg flex flex-col items-center justify-center text-green-700 shadow-sm relative">
+                       <span className="font-bold uppercase tracking-widest text-center leading-tight">Medium<br/>Rectangle</span>
+                       <span className="font-mono text-xs opacity-75 mt-2">300 x 250</span>
+                       <span className="absolute top-2 left-2 text-[10px] font-bold bg-green-200 px-2 py-0.5 rounded text-green-800">ADS</span>
+                   </div>
+               </div>
+            </div>
+        </div>
       </section>
     </div>
   );

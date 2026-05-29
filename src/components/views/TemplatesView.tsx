@@ -85,6 +85,32 @@ export function TemplatesView() {
               </li>
             </ul>
           </div>
+          
+          <div className="p-5 bg-gray-50 rounded-xl border border-gray-200 relative overflow-hidden hidden md:block">
+            <div className="text-[10px] uppercase font-bold text-gray-400 mb-4 tracking-widest">Demo Layout (Structural Wireframe)</div>
+            <div className="flex gap-4">
+              <div className="flex-1 flex flex-col gap-3">
+                <div className="flex gap-3 h-[180px]">
+                  <div className="flex-[5] bg-white border border-gray-200 rounded shadow-sm overflow-hidden flex flex-col relative">
+                     <div className="h-[60%] bg-gray-200 w-full"></div>
+                     <div className="p-3"><div className="h-4 w-3/4 bg-gray-300 rounded mb-2"></div><div className="h-3 w-1/2 bg-gray-200 rounded"></div></div>
+                  </div>
+                  <div className="flex-[3] flex flex-col gap-3">
+                    <div className="flex-1 bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-5/6 bg-gray-300 rounded mb-2"></div><div className="h-2 w-1/2 bg-gray-200 rounded"></div></div>
+                    <div className="flex-1 bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-5/6 bg-gray-300 rounded mb-2"></div><div className="h-2 w-1/2 bg-gray-200 rounded"></div></div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-3 gap-3 h-[90px]">
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                </div>
+              </div>
+              <div className="w-[140px] shrink-0 bg-green-50 border border-green-200 text-green-700 rounded flex flex-col items-center justify-center font-mono text-[10px] text-center shadow-sm">
+                <strong className="text-sm">Large 1</strong><br/>300x600<br/>(Ad Slot)
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col gap-4 pt-8 border-t border-gray-100 mt-2">
@@ -111,6 +137,26 @@ export function TemplatesView() {
                 <p>Quảng cáo: <strong className="text-[#1DB549]">Có Large 1</strong> trên màn hình.</p>
               </li>
             </ul>
+          </div>
+
+          <div className="p-5 bg-gray-50 rounded-xl border border-gray-200 relative overflow-hidden hidden md:block">
+            <div className="text-[10px] uppercase font-bold text-gray-400 mb-4 tracking-widest">Demo Layout (Structural Wireframe)</div>
+            <div className="flex gap-4">
+              <div className="flex-1 flex flex-col gap-3">
+                  <div className="h-[200px] bg-white border border-gray-200 rounded shadow-sm overflow-hidden flex flex-col relative w-[70%]">
+                     <div className="h-[65%] bg-gray-200 w-full"></div>
+                     <div className="p-3"><div className="h-4 w-3/4 bg-gray-300 rounded mb-2"></div><div className="h-3 w-1/2 bg-gray-200 rounded"></div></div>
+                  </div>
+                <div className="grid grid-cols-3 gap-3 h-[90px]">
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                </div>
+              </div>
+              <div className="w-[140px] shrink-0 bg-green-50 border border-green-200 text-green-700 rounded flex flex-col items-center justify-center font-mono text-[10px] text-center shadow-sm">
+                <strong className="text-sm">Large 1</strong><br/>300x600<br/>(Ad Slot)
+              </div>
+            </div>
           </div>
         </div>
 
@@ -139,6 +185,27 @@ export function TemplatesView() {
               </li>
             </ul>
           </div>
+
+          <div className="p-5 bg-gray-50 rounded-xl border border-gray-200 relative overflow-hidden hidden md:block">
+            <div className="text-[10px] uppercase font-bold text-gray-400 mb-4 tracking-widest">Demo Layout (Structural Wireframe)</div>
+            <div className="flex gap-4">
+              <div className="flex-1 flex flex-col gap-3">
+                  <div className="h-[240px] bg-white border border-gray-200 rounded shadow-sm overflow-hidden flex flex-col relative w-full">
+                     <div className="h-[70%] bg-gray-200 w-full"></div>
+                     <div className="p-4"><div className="h-5 w-3/4 bg-gray-300 rounded mb-2"></div><div className="h-3 w-1/2 bg-gray-200 rounded"></div></div>
+                  </div>
+                <div className="grid grid-cols-2 gap-3 h-[90px]">
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                </div>
+              </div>
+              <div className="w-[140px] shrink-0 bg-green-50 border border-green-200 text-green-700 rounded flex flex-col items-center justify-center font-mono text-[10px] text-center shadow-sm">
+                <strong className="text-sm">Large 1</strong><br/>300x600<br/>(Ad Slot)
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col gap-4 pt-8 border-t border-gray-100 mt-2">
@@ -165,6 +232,30 @@ export function TemplatesView() {
                 <p>Quảng cáo: <strong className="text-[#9F224E]">KHÔNG Large 1</strong> trên mảng khối.</p>
               </li>
             </ul>
+          </div>
+          
+          <div className="p-5 bg-gray-50 rounded-xl border border-gray-200 relative overflow-hidden hidden md:block">
+            <div className="text-[10px] uppercase font-bold text-gray-400 mb-4 tracking-widest">Demo Layout (Structural Wireframe)</div>
+            <div className="w-full flex gap-4">
+              <div className="w-full flex flex-col gap-3">
+                <div className="flex gap-3 h-[240px]">
+                  <div className="flex-[5] bg-white border border-gray-200 rounded shadow-sm overflow-hidden flex flex-col relative w-full">
+                     <div className="h-[70%] bg-gray-200 w-full"></div>
+                     <div className="p-4"><div className="h-5 w-3/4 bg-gray-300 rounded mb-2"></div><div className="h-3 w-1/2 bg-gray-200 rounded"></div></div>
+                  </div>
+                  <div className="flex-[3] flex flex-col gap-3">
+                    <div className="flex-1 bg-white border border-gray-200 rounded shadow-sm p-4"><div className="h-4 w-5/6 bg-gray-300 rounded mb-2"></div><div className="h-2 w-1/2 bg-gray-200 rounded"></div></div>
+                    <div className="flex-1 bg-white border border-gray-200 rounded shadow-sm p-4"><div className="h-4 w-5/6 bg-gray-300 rounded mb-2"></div><div className="h-2 w-1/2 bg-gray-200 rounded"></div></div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-4 gap-3 h-[100px]">
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                  <div className="bg-white border border-gray-200 rounded shadow-sm p-3"><div className="h-3 w-full bg-gray-300 rounded mb-2"></div><div className="h-2 w-2/3 bg-gray-200 rounded"></div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
