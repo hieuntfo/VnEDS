@@ -23,7 +23,7 @@ export type ComponentItem = {
 };
 
 export type NavItem = {
-  id: 'overview' | 'tokens' | 'atoms' | 'molecules' | 'organisms' | 'templates';
+  id: 'overview' | 'tokens' | 'atoms' | 'molecules' | 'organisms' | 'templates' | 'ads';
   label: string;
   icon: any; // Lucide icon
 };
